@@ -1,13 +1,7 @@
 .container {
   max-width: 800px; }
 .header {
-  margin-top: 6rem;
   text-align: center; }
-.value-prop {
-  margin-top: 1rem; }
-.value-props {
-  margin-top: 4rem;
-  margin-bottom: 4rem; }
 .docs-header {
   text-transform: uppercase;
   font-size: 1.4rem;
