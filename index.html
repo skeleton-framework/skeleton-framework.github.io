@@ -48,11 +48,11 @@
           <img class="value-img" src="images/feather.svg">
           Light as a feather at ~550 lines &amp; built with mobile in mind.
         </div>
-        <div class="four columns">
+        <div class="four columns value-prop">
           <img class="value-img" src="images/pens.svg">
           Styles designed to be a starting point, not a UI framework.
         </div>
-        <div class="four columns">
+        <div class="four columns value-prop">
           <img class="value-img" src="images/watch.svg">
           Quick to start with zero compiling or installing necessary.
         </div>
@@ -107,19 +107,10 @@
                   <a class="popover-link" href="https://github.com/SkeletonFramework/SkeletonFramework">On Github</a>
                 </li>
                 <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/SkeletonFramework/SkeletonFramework#browser-support">Browsers</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/SkeletonFramework/SkeletonFramework#license">License</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/SkeletonFramework/SkeletonFramework#extensions">Extensions</a>
+                  <a class="popover-link" href="https://github.com/SkeletonFramework/SkeletonFramework/blob/master/LICENSE">License</a>
                 </li>
                 <li class="popover-item">
                   <a class="popover-link" href="https://github.com/SkeletonFramework/SkeletonFramework/releases">Versions</a>
-                </li>
-                <li class="popover-item">
-                  <a class="popover-link" href="https://github.com/SkeletonFramework/SkeletonFramework#colophon">Colophon</a>
                 </li>
               </ul>
             </div>
@@ -139,7 +130,7 @@
     <!-- Grid -->
     <div class="docs-section" id="grid">
       <h6 class="docs-header">The grid</h6>
-      <p>The grid is a <u>12-column fluid grid with a max width of 1240px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser. </p>
+      <p>The grid is a <u>12-column fluid grid with a max width of 1200px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser. </p>
       <div class="example-grid docs-example">
         <div class="row">
           <div class="one column">One</div>
@@ -268,16 +259,16 @@
       <div class="docs-example">
         <div class="row">
           <div class="six columns">
-            <p><strong>The typography base</strong> is <a href="http://www.google.com/fonts/specimen/Raleway">Raleway</a> served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are all obviously included.</p>
+            <p><strong>The typography base</strong> is <a href="http://www.google.com/fonts/specimen/Raleway">Raleway</a> served by Google, set at 1.5rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are all obviously included.</p>
             <p><strong>Headings</strong> create a family of distinct sizes each with specific <code>letter-spacing</code>, <code>line-height</code>, and <code>margins</code>.</p>
           </div>
           <div class="six columns">
-            <h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 50rem</span></h1>
-            <h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 42rem</span></h2>
-            <h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 36rem</span></h3>
-            <h4>Heading<span class="heading-font-size"> <code>&lt;h4&gt;</code> 30rem</span></h4>
-            <h5>Heading<span class="heading-font-size"> <code>&lt;h5&gt;</code> 24rem</span></h5>
-            <h6>Heading<span class="heading-font-size"> <code>&lt;h6&gt;</code> 15rem</span></h6>
+            <h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 5.0rem</span></h1>
+            <h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 4.2rem</span></h2>
+            <h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 3.6rem</span></h3>
+            <h4>Heading<span class="heading-font-size"> <code>&lt;h4&gt;</code> 3.0rem</span></h4>
+            <h5>Heading<span class="heading-font-size"> <code>&lt;h5&gt;</code> 2.4rem</span></h5>
+            <h6>Heading<span class="heading-font-size"> <code>&lt;h6&gt;</code> 1.5rem</span></h6>
           </div>
         </div>
       </div>
@@ -618,29 +609,84 @@
 
 <!-- CODE EXAMPLE ———————————————————————————————————————— -->
 <pre class="code-example">
-<code class="code-example-body prettyprint">/* Utility Classes */
+<code class="code-example-body prettyprint">
 
-/* Make element full width */
+/* Utilities
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
-  width: 100%;
-  box-sizing: border-box; }
+  width: 100%; }
 
-/* Make sure elements don't run outside containers (great for images in columns) */
 .u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box; }
+  max-width: 100%; }
 
-/* Float either direction */
+/* Floats */
 .u-pull-right {
   float: right; }
+
 .u-pull-left {
   float: left; }
 
-/* Clear a float */
 .u-cf {
   content: "";
   display: table;
   clear: both; }
+
+/* Positioning */
+.u-center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**
+ * Note:
+ *
+ * Nest this class inside something with `position: relative` to have
+ * your element centered relative to its containing element.
+ *
+ * Use this class without nesting it to have your element centered relative
+ * to the viewport.
+ */
+.u-center-abs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%); }
+
+/* Type */
+.u-text-center {
+  text-align: center !important; }
+
+.u-text-right {
+  text-align: right !important; }
+
+.u-text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+/* Peek a boo */
+.u-hide {
+  display: none !important; }
+
+.u-show {
+  display: block !important; }
+
+.u-invisible {
+  visibility: hidden !important; }
+
+.u-visible {
+  visibility: visible !important; }
+
+/* Misc */
+.u-img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
 </code>
 </pre>
 <!-- ————————————————————————————————————————————————————— -->
@@ -659,7 +705,7 @@
           <h6 class="example-header">Demo Landing Page</h6>
           <p class="example-description">This template is an example of how easy it can be to create a landing page with just the Skeleton grid and a few custom styles. The entire demo is ~150 lines of CSS including comments (most of which is positioning the phones at the top).</p>
           <a class="button" href="examples/landing" target="_blank">Demo</a>
-          <a class="button" href="https://github.com/SkeletonFramework/SkeletonFramework/tree/master/examples/landing" target="_blank">Source</a>
+          <a class="button" href="https://github.com/SkeletonFramework/skeletonframework.github.io/tree/master/examples/landing" target="_blank">Source</a>
         </div>
       </div>
       <div class="row example">
