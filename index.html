@@ -16,8 +16,13 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/site.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script><script src="js/site.js"></script><link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 
+  <script src="/js/vue.js"></script>
+  <script src="js/site.js"></script>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body class="code-snippets-visible">
@@ -100,6 +105,48 @@
         </ul>
       </div>
     </nav>
+
+    <div class="docs-section" id="custom-build-form">
+        <h3> Use this form to get a custom build of Skeleton containing only the parts you need </h3>
+
+        <div class="row">
+            <div class="six columns">
+                <label>
+                    <input type="checkbox" v-model="buildOpts.grid" />
+                    <span> Grid System </span>
+                </label>
+
+                <label>
+                    <input type="checkbox" v-model="buildOpts.typo" />
+                    <span> Typography </span>
+                </label>
+
+                <label>
+                    <input type="checkbox" v-model="buildOpts.util" />
+                    <span> Utility Classes </span>
+                </label>
+            </div>
+
+            <div class="six columns">
+                <label>
+                    <input type="checkbox" v-model="buildOpts.content" />
+                    <span> Content Classes </span>
+                </label>
+
+                <label>
+                    <input type="checkbox" v-model="buildOpts.buttons" />
+                    <span> Buttons </span>
+                </label>
+
+                <label>
+                    <input type="checkbox" v-model="buildOpts.forms" />
+                    <span> Forms </span>
+                </label>
+            </div>
+        </div>
+
+        <button @click="getBuild" class="button button-primary">Get Build</button>
+    </div>
 
     <div class="docs-section" id="intro">
       <h6 class="docs-header">Is Skeleton Framework for you?</h6>
@@ -649,6 +696,7 @@
       </div>
     </div>
   </div>
+
 </body>
 
 </html>
